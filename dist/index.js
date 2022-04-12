@@ -6207,8 +6207,7 @@ class WorkflowHandler {
                 const response = yield this.octokit.actions.listWorkflowRuns({
                     owner: this.owner,
                     repo: this.repo,
-                    workflow_id: workflowId,
-                    event: 'workflow_dispatch'
+                    workflow_id: workflowId
                 });
                 debug_1.debug('List Workflow Runs', response);
                 const runs = response.data.workflow_runs
